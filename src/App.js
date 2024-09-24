@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import  react {useState} from "react"
+import Navbar from './Component/Navbar/Navbar';
+
 
 function App() {
+  const [toggledrawersidebar, settogledrawersidebar useState = ({
+    display: "none"
+  })];
+  const toggledrawersidebar=()=>{
+    if(toggledrawersidebar.diplay==="none"){
+      settogledrawersidebar({
+        display:"flex",
+      });
+
+    }else{
+      settogledrawersidebar({
+        display:"none",
+      });
+    }
+  }
+const[editcreatchanlbtn,seteditcreatechanelbtn]=useState(false);
+const[videouploadpage,setvideouploadpage]=useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Navbar seteditcreatechanelbtn={seteditcreatechanelbtn}toggledrawe={toggledrawer}/>
+   
   );
 }
 
